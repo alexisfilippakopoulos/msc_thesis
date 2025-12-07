@@ -1,0 +1,281 @@
+{
+    "datasetCommonParams": {
+        "dataset_root_dir": "/data/efthygeo/mmsa",
+        "mosi": {
+            "aligned": {
+                "featurePath": "mosi/Processed/aligned_50.pkl",
+                "seq_lens": [
+                    50,
+                    50,
+                    50
+                ],
+                "feature_dims": [
+                    768,
+                    1024,
+                    768
+                ],
+                "train_samples": 1284,
+                "num_classes": 3,
+                "language": "en",
+                "KeyEval": "MAE",
+                "missing_rate": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "missing_seed": [
+                    1111,
+                    1111,
+                    1111
+                ]
+            },
+            "unaligned": {
+                "featurePath": "mosi/Processed/unaligned_50.pkl",
+                "seq_lens": [
+                    50,
+                    375,
+                    500
+                ],
+                "feature_dims": [
+                    768,
+                    5,
+                    20
+                ],
+                "train_samples": 1284,
+                "num_classes": 3,
+                "language": "en",
+                "KeyEval": "MAE",
+                "missing_rate": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "missing_seed": [
+                    1111,
+                    1111,
+                    1111
+                ]
+            }
+        },
+        "mosei": {
+            "aligned": {
+                "featurePath": "mosei/Processed/aligned_50.pkl",
+                "seq_lens": [
+                    50,
+                    50,
+                    50
+                ],
+                "feature_dims": [
+                    768,
+                    74,
+                    35
+                ],
+                "train_samples": 16326,
+                "num_classes": 3,
+                "language": "en",
+                "KeyEval": "Loss",
+                "missing_rate": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "missing_seed": [
+                    1111,
+                    1111,
+                    1111
+                ]
+            },
+            "unaligned": {
+                "featurePath": "mosei/Processed/unaligned_50.pkl",
+                "seq_lens": [
+                    50,
+                    500,
+                    375
+                ],
+                "feature_dims": [
+                    768,
+                    74,
+                    35
+                ],
+                "train_samples": 16326,
+                "num_classes": 3,
+                "language": "en",
+                "KeyEval": "Loss",
+                "missing_rate": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "missing_seed": [
+                    1111,
+                    1111,
+                    1111
+                ]
+            }
+        },
+        "sims": {
+            "unaligned": {
+                "featurePath": "sims/Processed/unaligned_39.pkl",
+                "seq_lens": [
+                    39,
+                    400,
+                    55
+                ],
+                "feature_dims": [
+                    768,
+                    33,
+                    709
+                ],
+                "train_samples": 1368,
+                "num_classes": 3,
+                "language": "cn",
+                "KeyEval": "Loss",
+                "missing_rate": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "missing_seed": [
+                    1111,
+                    1111,
+                    1111
+                ]
+            }
+        }
+    },
+    "msalm": {
+        "efthygeo_comments": {
+            "1": "unalined data",
+            "2": "unaligned model and mms2s internally handles it",
+            "3": "mosi/mosei/regression"
+        },
+        "commonParams": {
+            "need_data_aligned": false,
+            "need_model_aligned": false,
+            "early_stop": 10,
+            "use_bert": false,
+            "use_bert_finetune": false,
+            "attn_mask": true,
+            "excludeZero": true,
+            "update_epochs": 8
+        },
+        "datasetParams": {
+            "mosei": {
+                "hfPath": "mosei/Processed/mms2s",
+                "use_ulgm": false,
+                "update_labels_patience": 1,
+                "H": 3.0,
+                "del_model": true,
+                "max_token_len": 50,
+                "pad_token": "<|endoftext|>",
+                "lm": "gpt2",
+                "use_bf16": false,
+                "task_out": 1,
+                "use_clm": true,
+                "gamma": 1.1,
+                "l_bn": 1.0,
+                "l_av": 1.0,
+                "l_t": 1.0,
+                "warmup_epochs": 1,
+                "max_epochs": 15,
+                "beta_1": 0.9,
+                "beta_2": 0.95,
+                "use_lnorm": true,
+                "rescale": false,
+                "rescaler": "sqrt",
+                "use_seqaug": true,
+                "n_bn_fusion": 12,
+                "modded_loss": true,
+                "embedding_attr_name": "transformer.wte",
+                "decoder_layers_attr_name": "transformer.h",
+                "mmgpt": {
+                    "type": "gpt2",
+                    "d_out": 64,
+                    "combine": true,
+                    "dropout": 0.1,
+                    "mm_layer": [
+                        3,
+                        5,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11
+                    ],
+                    "layer_dropout": 0.0,
+                    "dense": true,
+                    "tie_ffn": true,
+                    "n_embd": 768,
+                    "bias": true,
+                    "kv_dim": 30,
+                    "n_head": 16,
+                    "d_mm": 768,
+                    "gating": "sigmoid",
+                    "init_gate": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "use_softperm": true,
+                    "p_perm": 0.2,
+                    "p_apply": 0.30,
+                    "use_lora": false,
+                    "lora": {
+                        "lora_alpha": 128,
+                        "r": 64,
+                        "lora_dropout": 0.05
+                    }
+                },
+                "av_enc": {
+                    "finetune": true,
+                    "from_pretrained": true,
+                    "path_to_pretrained": "checkpoints/bienc-mosei-best/bienc-mosei-1994.pth",
+                    "feature_dims": [
+                        768,
+                        74,
+                        35
+                    ],
+                    "d_enc": 30,
+                    "n_embd": 30,
+                    "n_head": 6,
+                    "nlevels": 3,
+                    "d_enc_out": 30,
+                    "maxlen": 50,
+                    "p_mask": 0.15,
+                    "enc_attn_dropout": 0.1,
+                    "enc_res_dropout": 0.1,
+                    "enc_dropout": 0.1,
+                    "use_softperm": true,
+                    "p_perm": 0.2,
+                    "mask_perm_ratio": 0.5,
+                    "tf_fusion": false,
+                    "use_bn": false,
+                    "use_ln": false
+                },
+                "gpt": {
+                    "vocab_size": 50257,
+                    "block_size": 1024,
+                    "bias": true,
+                    "n_embd": 1024,
+                    "n_layer": 24,
+                    "n_head": 16,
+                    "dropout": 0.0
+                },
+                "batch_size": 32,
+                "grad_clip": 5.0,
+                "patience": 10,
+                "weight_decay_mmgpt": 0.005,
+                "weight_decay_av": 0.005,
+                "learning_rate_av": 0.0001,
+                "learning_rate_mmgpt": 0.0001
+            }
+        }
+    }
+}

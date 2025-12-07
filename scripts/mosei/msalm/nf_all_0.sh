@@ -1,0 +1,24 @@
+export CUDA_VISIBLE_DEVICES=2
+
+python experiments/regression/mult_base.py -m msalm -d mosei -g 0 --exp-name msalm-mosei-large-best-nf-4 -c MMSA/config/regression/mms2s/mmgpt/new_nat_mosei/large_best_nf_4.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995
+python experiments/regression/mult_base.py -m msalm -d mosei -g 0 --exp-name msalm-mosei-med-best-nf-12 -c MMSA/config/regression/mms2s/mmgpt/new_nat_mosei/med_best_nf_12.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995 -s 1996
+
+# python experiments/regression/mult_base.py -m msalm -d mosei -g 0 --exp-name msalm-mosei-base-best-nf-4 -c MMSA/config/regression/mms2s/mmgpt/new_nat_mosei/base_best_nf_4.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995
+# python experiments/regression/mult_base.py -m msalm -d sims -g 0 --exp-name msalm-sims-base-best-nf-12 -c MMSA/config/regression/mms2s/mmgpt/new_nat_sims/base_best_nf_12.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995 -s 1996
+
+
+### SIMS(base) - Embedding Regularization Ablation
+python experiments/regression/mult_base.py -m msalm -d sims -g 0 --exp-name msalm-sims-base-best-embd-drop-0.1 -c MMSA/config/regression/mms2s/mmgpt/new_nat_sims/base_best_embd_drop_0.1.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995 -s 1996
+python experiments/regression/mult_base.py -m msalm -d sims -g 0 --exp-name msalm-sims-base-best-embd-drop-0.2 -c MMSA/config/regression/mms2s/mmgpt/new_nat_sims/base_best_embd_drop_0.2.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995 -s 1996
+python experiments/regression/mult_base.py -m msalm -d sims -g 0 --exp-name msalm-sims-base-best-embd-drop-0.3 -c MMSA/config/regression/mms2s/mmgpt/new_nat_sims/base_best_embd_drop_0.3.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995 -s 1996
+python experiments/regression/mult_base.py -m msalm -d sims -g 0 --exp-name msalm-sims-base-best-embd-noise-0.05 -c MMSA/config/regression/mms2s/mmgpt/new_nat_sims/base_best_embd_noise_0.05.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995 -s 1996
+python experiments/regression/mult_base.py -m msalm -d sims -g 0 --exp-name msalm-sims-base-best-embd-noise-0.1 -c MMSA/config/regression/mms2s/mmgpt/new_nat_sims/base_best_embd_noise_0.1.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995 -s 1996
+python experiments/regression/mult_base.py -m msalm -d sims -g 0 --exp-name msalm-sims-base-best-embd-noise-0.2 -c MMSA/config/regression/mms2s/mmgpt/new_nat_sims/base_best_embd_noise_0.2.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995 -s 1996
+
+### MOSEI(large) - Embedding Regularization Ablation
+python experiments/regression/mult_base.py -m msalm -d mosei -g 0 --exp-name msalm-mosei-base-best-embd-drop-0.1 -c MMSA/config/regression/mms2s/mmgpt/new_nat_mosei/base_best_embd_drop_0.1.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995
+python experiments/regression/mult_base.py -m msalm -d mosei -g 0 --exp-name msalm-mosei-base-best-embd-drop-0.2 -c MMSA/config/regression/mms2s/mmgpt/new_nat_mosei/base_best_embd_drop_0.2.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995
+python experiments/regression/mult_base.py -m msalm -d mosei -g 0 --exp-name msalm-mosei-base-best-embd-drop-0.3 -c MMSA/config/regression/mms2s/mmgpt/new_nat_mosei/base_best_embd_drop_0.3.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995
+python experiments/regression/mult_base.py -m msalm -d mosei -g 0 --exp-name msalm-mosei-base-best-embd-noise-0.05 -c MMSA/config/regression/mms2s/mmgpt/new_nat_mosei/base_best_embd_noise_0.05.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995
+python experiments/regression/mult_base.py -m msalm -d mosei -g 0 --exp-name msalm-mosei-base-best-embd-noise-0.1 -c MMSA/config/regression/mms2s/mmgpt/new_nat_mosei/base_best_embd_noise_0.1.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995
+python experiments/regression/mult_base.py -m msalm -d mosei -g 0 --exp-name msalm-mosei-base-best-embd-noise-0.2 -c MMSA/config/regression/mms2s/mmgpt/new_nat_mosei/base_best_embd_noise_0.2.json --res-save-dir MMSA/results/msagpt/mosei/nat/gpt2 -n 2 -s 1990 -s 1991 -s 1992 -s 1993 -s 1994 -s 1995

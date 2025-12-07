@@ -1,0 +1,75 @@
+2025-12-06 18:22:59,340 - MMSA [INFO] - ======================================== Program Start ========================================
+2025-12-06 18:22:59,386 - MMSA [INFO] - Running with args:
+2025-12-06 18:22:59,386 - MMSA [INFO] - {'model_name': 'bienc', 'dataset_name': 'sims', 'featurePath': '/home/alex/Downloads/MSA-Datasets/CH-SIMS/Processed/unaligned_39.pkl', 'seq_lens': [39, 400, 55], 'feature_dims': [768, 33, 709], 'train_samples': 1368, 'num_classes': 3, 'language': 'cn', 'KeyEval': 'Loss', 'missing_rate': [0.0, 0.0, 0.0], 'missing_seed': [1111, 1111, 1111], 'need_data_aligned': False, 'need_model_aligned': False, 'early_stop': 8, 'use_bert': False, 'use_bert_finetune': False, 'attn_mask': True, 'update_epochs': 4, 'use_augmentation': False, 'use_m3xup': False, 'hfPath': False, 'fs2': False, 'max_token_len': 39, 'gpt': {'mm_dropout': 0.1, 'mm_layer': [3, 5, 7, 9, 11], 'layer_dropout': 0.2, 'dense': True, 'tie_ffn': True}, 'av_enc': {'d_enc': 30, 'n_embd': 30, 'n_head': 6, 'nlevels': 3, 'd_enc_out': 30, 'maxlen': 39, 'p_mask': 0.15, 'enc_attn_dropout': 0.1, 'enc_res_dropout': 0.1, 'enc_dropout': 0.1, 'use_softperm': True, 'p_perm': 0.2, 'mask_perm_ratio': 0.5, 'tf_fusion': False, 'use_ln': False, 'use_bn': True}, 'batch_size': 32, 'learning_rate': 0.0005, 'grad_clip': 1.0, 'patience': 10, 'weight_decay': 0.001, 'device': device(type='cuda', index=0), 'train_mode': 'regression', 'custom_feature': None, 'feature_T': '', 'feature_A': '', 'feature_V': ''}
+2025-12-06 18:22:59,386 - MMSA [INFO] - Seeds: [1990]
+2025-12-06 18:22:59,387 - MMSA [INFO] - ------------------------------ Running with seed 1990 [1/1] ------------------------------
+2025-12-06 18:25:35,807 - MMSA [INFO] - The model has 92745 trainable parameters
+2025-12-06 18:25:40,598 - MMSA [INFO] - TRAIN-(bienc) [1/1/1] >> loss: 0.8565  Mult_acc_2: 0.5811  Mult_acc_3: 0.4518  Mult_acc_5: 0.2303  F1_score: 0.5890  MAE: 0.7484  Corr: 0.0110 
+2025-12-06 18:25:42,095 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.5285  Mult_acc_3: 0.3860  Mult_acc_5: 0.1776  F1_score: 0.5471  MAE: 0.6609  Corr: 0.0734  Loss: 0.6660 
+2025-12-06 18:25:45,888 - MMSA [INFO] - TRAIN-(bienc) [1/2/1] >> loss: 0.7028  Mult_acc_2: 0.5716  Mult_acc_3: 0.4254  Mult_acc_5: 0.2142  F1_score: 0.5814  MAE: 0.6873  Corr: 0.0166 
+2025-12-06 18:25:47,405 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6096  Mult_acc_3: 0.3925  Mult_acc_5: 0.1820  F1_score: 0.5911  MAE: 0.6268  Corr: 0.0223  Loss: 0.6357 
+2025-12-06 18:25:51,246 - MMSA [INFO] - TRAIN-(bienc) [1/3/1] >> loss: 0.6427  Mult_acc_2: 0.6352  Mult_acc_3: 0.4671  Mult_acc_5: 0.2273  F1_score: 0.6202  MAE: 0.6291  Corr: 0.0802 
+2025-12-06 18:25:52,774 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6711  Mult_acc_3: 0.4912  Mult_acc_5: 0.1996  F1_score: 0.6059  MAE: 0.6071  Corr: 0.0720  Loss: 0.6006 
+2025-12-06 18:25:56,598 - MMSA [INFO] - TRAIN-(bienc) [1/4/1] >> loss: 0.6251  Mult_acc_2: 0.5936  Mult_acc_3: 0.4452  Mult_acc_5: 0.2054  F1_score: 0.5913  MAE: 0.6211  Corr: 0.0931 
+2025-12-06 18:25:58,121 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6711  Mult_acc_3: 0.4759  Mult_acc_5: 0.1930  F1_score: 0.6083  MAE: 0.5993  Corr: 0.0978  Loss: 0.5879 
+2025-12-06 18:26:01,995 - MMSA [INFO] - TRAIN-(bienc) [1/5/1] >> loss: 0.6146  Mult_acc_2: 0.6192  Mult_acc_3: 0.4488  Mult_acc_5: 0.2215  F1_score: 0.6002  MAE: 0.6112  Corr: 0.0752 
+2025-12-06 18:26:03,553 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6908  Mult_acc_3: 0.5197  Mult_acc_5: 0.2061  F1_score: 0.5964  MAE: 0.6009  Corr: 0.1110  Loss: 0.6000 
+2025-12-06 18:26:07,368 - MMSA [INFO] - TRAIN-(bienc) [2/6/1] >> loss: 0.598  Mult_acc_2: 0.6528  Mult_acc_3: 0.4817  Mult_acc_5: 0.2156  F1_score: 0.6322  MAE: 0.5945  Corr: 0.1491 
+2025-12-06 18:26:08,879 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6447  Mult_acc_3: 0.4342  Mult_acc_5: 0.1820  F1_score: 0.6267  MAE: 0.5974  Corr: 0.1358  Loss: 0.5944 
+2025-12-06 18:26:12,751 - MMSA [INFO] - TRAIN-(bienc) [3/7/1] >> loss: 0.5739  Mult_acc_2: 0.6732  Mult_acc_3: 0.5022  Mult_acc_5: 0.2361  F1_score: 0.6405  MAE: 0.5730  Corr: 0.2033 
+2025-12-06 18:26:14,263 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6645  Mult_acc_3: 0.4693  Mult_acc_5: 0.1864  F1_score: 0.6238  MAE: 0.5869  Corr: 0.1752  Loss: 0.5851 
+2025-12-06 18:26:18,095 - MMSA [INFO] - TRAIN-(bienc) [1/8/1] >> loss: 0.5714  Mult_acc_2: 0.6740  Mult_acc_3: 0.4905  Mult_acc_5: 0.2288  F1_score: 0.6525  MAE: 0.5694  Corr: 0.2184 
+2025-12-06 18:26:19,622 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6908  Mult_acc_3: 0.5000  Mult_acc_5: 0.1996  F1_score: 0.6410  MAE: 0.5793  Corr: 0.2210  Loss: 0.5771 
+2025-12-06 18:26:23,466 - MMSA [INFO] - TRAIN-(bienc) [1/9/1] >> loss: 0.5626  Mult_acc_2: 0.6725  Mult_acc_3: 0.5066  Mult_acc_5: 0.2361  F1_score: 0.6492  MAE: 0.5610  Corr: 0.2657 
+2025-12-06 18:26:24,975 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6754  Mult_acc_3: 0.4781  Mult_acc_5: 0.1886  F1_score: 0.6566  MAE: 0.5721  Corr: 0.2725  Loss: 0.5752 
+2025-12-06 18:26:28,754 - MMSA [INFO] - TRAIN-(bienc) [1/10/1] >> loss: 0.555  Mult_acc_2: 0.6923  Mult_acc_3: 0.5205  Mult_acc_5: 0.2405  F1_score: 0.6759  MAE: 0.5505  Corr: 0.3124 
+2025-12-06 18:26:30,275 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6776  Mult_acc_3: 0.4956  Mult_acc_5: 0.2018  F1_score: 0.6678  MAE: 0.5648  Corr: 0.3077  Loss: 0.5614 
+2025-12-06 18:26:34,142 - MMSA [INFO] - TRAIN-(bienc) [1/11/1] >> loss: 0.5469  Mult_acc_2: 0.7032  Mult_acc_3: 0.5468  Mult_acc_5: 0.2515  F1_score: 0.6886  MAE: 0.5432  Corr: 0.3430 
+2025-12-06 18:26:35,675 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6996  Mult_acc_3: 0.5219  Mult_acc_5: 0.2061  F1_score: 0.6868  MAE: 0.5617  Corr: 0.3326  Loss: 0.5519 
+2025-12-06 18:26:39,532 - MMSA [INFO] - TRAIN-(bienc) [1/12/1] >> loss: 0.5426  Mult_acc_2: 0.7178  Mult_acc_3: 0.5402  Mult_acc_5: 0.2412  F1_score: 0.7064  MAE: 0.5399  Corr: 0.3670 
+2025-12-06 18:26:41,063 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7171  Mult_acc_3: 0.5373  Mult_acc_5: 0.2193  F1_score: 0.7123  MAE: 0.5486  Corr: 0.3746  Loss: 0.5543 
+2025-12-06 18:26:44,933 - MMSA [INFO] - TRAIN-(bienc) [2/13/1] >> loss: 0.5378  Mult_acc_2: 0.6988  Mult_acc_3: 0.5475  Mult_acc_5: 0.2558  F1_score: 0.6905  MAE: 0.5358  Corr: 0.3721 
+2025-12-06 18:26:46,508 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6842  Mult_acc_3: 0.5197  Mult_acc_5: 0.2281  F1_score: 0.6897  MAE: 0.5570  Corr: 0.3522  Loss: 0.5619 
+2025-12-06 18:26:50,460 - MMSA [INFO] - TRAIN-(bienc) [3/14/1] >> loss: 0.5191  Mult_acc_2: 0.7346  Mult_acc_3: 0.5811  Mult_acc_5: 0.2741  F1_score: 0.7288  MAE: 0.5145  Corr: 0.4374 
+2025-12-06 18:26:52,055 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7434  Mult_acc_3: 0.5636  Mult_acc_5: 0.2610  F1_score: 0.7290  MAE: 0.5416  Corr: 0.4040  Loss: 0.5404 
+2025-12-06 18:26:55,955 - MMSA [INFO] - TRAIN-(bienc) [1/15/1] >> loss: 0.5305  Mult_acc_2: 0.7142  Mult_acc_3: 0.5651  Mult_acc_5: 0.2544  F1_score: 0.7096  MAE: 0.5263  Corr: 0.4018 
+2025-12-06 18:26:57,477 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7281  Mult_acc_3: 0.5417  Mult_acc_5: 0.2895  F1_score: 0.6986  MAE: 0.5647  Corr: 0.3720  Loss: 0.5755 
+2025-12-06 18:27:01,415 - MMSA [INFO] - TRAIN-(bienc) [2/16/1] >> loss: 0.53  Mult_acc_2: 0.7105  Mult_acc_3: 0.5673  Mult_acc_5: 0.2756  F1_score: 0.7083  MAE: 0.5239  Corr: 0.4129 
+2025-12-06 18:27:02,985 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7412  Mult_acc_3: 0.5614  Mult_acc_5: 0.2895  F1_score: 0.7213  MAE: 0.5462  Corr: 0.3998  Loss: 0.5611 
+2025-12-06 18:27:06,905 - MMSA [INFO] - TRAIN-(bienc) [3/17/1] >> loss: 0.5028  Mult_acc_2: 0.7390  Mult_acc_3: 0.5892  Mult_acc_5: 0.2924  F1_score: 0.7340  MAE: 0.4989  Corr: 0.4777 
+2025-12-06 18:27:08,449 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7083  Mult_acc_3: 0.5504  Mult_acc_5: 0.2434  F1_score: 0.7132  MAE: 0.5402  Corr: 0.4120  Loss: 0.5425 
+2025-12-06 18:27:12,237 - MMSA [INFO] - TRAIN-(bienc) [4/18/1] >> loss: 0.5241  Mult_acc_2: 0.7120  Mult_acc_3: 0.5446  Mult_acc_5: 0.2654  F1_score: 0.7098  MAE: 0.5185  Corr: 0.4346 
+2025-12-06 18:27:13,821 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6118  Mult_acc_3: 0.5110  Mult_acc_5: 0.2149  F1_score: 0.6267  MAE: 0.5656  Corr: 0.4134  Loss: 0.5575 
+2025-12-06 18:27:17,654 - MMSA [INFO] - TRAIN-(bienc) [5/19/1] >> loss: 0.5292  Mult_acc_2: 0.7186  Mult_acc_3: 0.5694  Mult_acc_5: 0.2624  F1_score: 0.7161  MAE: 0.5242  Corr: 0.4137 
+2025-12-06 18:27:19,192 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7325  Mult_acc_3: 0.5614  Mult_acc_5: 0.2675  F1_score: 0.7140  MAE: 0.5388  Corr: 0.4201  Loss: 0.5372 
+2025-12-06 18:27:23,070 - MMSA [INFO] - TRAIN-(bienc) [1/20/1] >> loss: 0.4999  Mult_acc_2: 0.7310  Mult_acc_3: 0.5936  Mult_acc_5: 0.2807  F1_score: 0.7325  MAE: 0.4987  Corr: 0.4773 
+2025-12-06 18:27:24,600 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7127  Mult_acc_3: 0.5636  Mult_acc_5: 0.2610  F1_score: 0.7136  MAE: 0.5297  Corr: 0.4289  Loss: 0.5404 
+2025-12-06 18:27:28,468 - MMSA [INFO] - TRAIN-(bienc) [2/21/1] >> loss: 0.5086  Mult_acc_2: 0.7500  Mult_acc_3: 0.5980  Mult_acc_5: 0.2953  F1_score: 0.7431  MAE: 0.5051  Corr: 0.4642 
+2025-12-06 18:27:30,028 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7193  Mult_acc_3: 0.5548  Mult_acc_5: 0.2456  F1_score: 0.7233  MAE: 0.5285  Corr: 0.4403  Loss: 0.5257 
+2025-12-06 18:27:34,003 - MMSA [INFO] - TRAIN-(bienc) [1/22/1] >> loss: 0.4932  Mult_acc_2: 0.7346  Mult_acc_3: 0.5950  Mult_acc_5: 0.2909  F1_score: 0.7354  MAE: 0.4921  Corr: 0.4949 
+2025-12-06 18:27:35,542 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7303  Mult_acc_3: 0.5636  Mult_acc_5: 0.2851  F1_score: 0.7250  MAE: 0.5248  Corr: 0.4399  Loss: 0.5236 
+2025-12-06 18:27:39,514 - MMSA [INFO] - TRAIN-(bienc) [1/23/1] >> loss: 0.4863  Mult_acc_2: 0.7463  Mult_acc_3: 0.6053  Mult_acc_5: 0.3231  F1_score: 0.7425  MAE: 0.4802  Corr: 0.5101 
+2025-12-06 18:27:41,059 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7127  Mult_acc_3: 0.5636  Mult_acc_5: 0.2697  F1_score: 0.7187  MAE: 0.5291  Corr: 0.4336  Loss: 0.5467 
+2025-12-06 18:27:45,010 - MMSA [INFO] - TRAIN-(bienc) [2/24/1] >> loss: 0.4918  Mult_acc_2: 0.7376  Mult_acc_3: 0.5994  Mult_acc_5: 0.3063  F1_score: 0.7396  MAE: 0.4868  Corr: 0.5098 
+2025-12-06 18:27:46,617 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7127  Mult_acc_3: 0.5570  Mult_acc_5: 0.2917  F1_score: 0.7099  MAE: 0.5264  Corr: 0.4260  Loss: 0.5393 
+2025-12-06 18:27:50,495 - MMSA [INFO] - TRAIN-(bienc) [3/25/1] >> loss: 0.5025  Mult_acc_2: 0.7434  Mult_acc_3: 0.6009  Mult_acc_5: 0.2858  F1_score: 0.7373  MAE: 0.4989  Corr: 0.4844 
+2025-12-06 18:27:52,037 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7215  Mult_acc_3: 0.5724  Mult_acc_5: 0.2873  F1_score: 0.7194  MAE: 0.5211  Corr: 0.4452  Loss: 0.5138 
+2025-12-06 18:27:56,012 - MMSA [INFO] - TRAIN-(bienc) [1/26/1] >> loss: 0.4825  Mult_acc_2: 0.7449  Mult_acc_3: 0.6096  Mult_acc_5: 0.3158  F1_score: 0.7426  MAE: 0.4784  Corr: 0.5290 
+2025-12-06 18:27:57,547 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7303  Mult_acc_3: 0.5768  Mult_acc_5: 0.3136  F1_score: 0.7283  MAE: 0.5239  Corr: 0.4401  Loss: 0.5317 
+2025-12-06 18:28:01,338 - MMSA [INFO] - TRAIN-(bienc) [2/27/1] >> loss: 0.4722  Mult_acc_2: 0.7690  Mult_acc_3: 0.6177  Mult_acc_5: 0.3165  F1_score: 0.7658  MAE: 0.4675  Corr: 0.5477 
+2025-12-06 18:28:02,877 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7237  Mult_acc_3: 0.5636  Mult_acc_5: 0.2851  F1_score: 0.7179  MAE: 0.5265  Corr: 0.4354  Loss: 0.5275 
+2025-12-06 18:28:06,744 - MMSA [INFO] - TRAIN-(bienc) [3/28/1] >> loss: 0.4815  Mult_acc_2: 0.7493  Mult_acc_3: 0.6053  Mult_acc_5: 0.3012  F1_score: 0.7455  MAE: 0.4773  Corr: 0.5311 
+2025-12-06 18:28:08,529 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7237  Mult_acc_3: 0.5636  Mult_acc_5: 0.2939  F1_score: 0.7263  MAE: 0.5202  Corr: 0.4479  Loss: 0.5277 
+2025-12-06 18:28:12,705 - MMSA [INFO] - TRAIN-(bienc) [4/29/1] >> loss: 0.4681  Mult_acc_2: 0.7690  Mult_acc_3: 0.6221  Mult_acc_5: 0.3348  F1_score: 0.7656  MAE: 0.4637  Corr: 0.5438 
+2025-12-06 18:28:14,246 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7259  Mult_acc_3: 0.5636  Mult_acc_5: 0.2807  F1_score: 0.7212  MAE: 0.5207  Corr: 0.4315  Loss: 0.5303 
+2025-12-06 18:28:18,107 - MMSA [INFO] - TRAIN-(bienc) [5/30/1] >> loss: 0.4799  Mult_acc_2: 0.7712  Mult_acc_3: 0.6213  Mult_acc_5: 0.3304  F1_score: 0.7668  MAE: 0.4752  Corr: 0.5243 
+2025-12-06 18:28:19,680 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6930  Mult_acc_3: 0.5482  Mult_acc_5: 0.2675  F1_score: 0.7022  MAE: 0.5240  Corr: 0.4554  Loss: 0.5237 
+2025-12-06 18:28:23,632 - MMSA [INFO] - TRAIN-(bienc) [6/31/1] >> loss: 0.4788  Mult_acc_2: 0.7463  Mult_acc_3: 0.6104  Mult_acc_5: 0.3180  F1_score: 0.7463  MAE: 0.4746  Corr: 0.5358 
+2025-12-06 18:28:25,205 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7061  Mult_acc_3: 0.5680  Mult_acc_5: 0.2807  F1_score: 0.7073  MAE: 0.5147  Corr: 0.4440  Loss: 0.5304 
+2025-12-06 18:28:29,127 - MMSA [INFO] - TRAIN-(bienc) [7/32/1] >> loss: 0.4769  Mult_acc_2: 0.7639  Mult_acc_3: 0.6111  Mult_acc_5: 0.3107  F1_score: 0.7605  MAE: 0.4743  Corr: 0.5274 
+2025-12-06 18:28:30,720 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.6996  Mult_acc_3: 0.5592  Mult_acc_5: 0.2741  F1_score: 0.7031  MAE: 0.5195  Corr: 0.4429  Loss: 0.5293 
+2025-12-06 18:28:34,598 - MMSA [INFO] - TRAIN-(bienc) [8/33/1] >> loss: 0.4781  Mult_acc_2: 0.7544  Mult_acc_3: 0.6213  Mult_acc_5: 0.3385  F1_score: 0.7549  MAE: 0.4707  Corr: 0.5311 
+2025-12-06 18:28:36,147 - MMSA [INFO] - VAL-(bienc) >>  Mult_acc_2: 0.7390  Mult_acc_3: 0.5789  Mult_acc_5: 0.3136  F1_score: 0.7318  MAE: 0.5150  Corr: 0.4439  Loss: 0.5290 
+2025-12-06 18:28:37,725 - MMSA [INFO] - TEST-(bienc) >>  Mult_acc_2: 0.7615  Mult_acc_3: 0.6083  Mult_acc_5: 0.2823  F1_score: 0.7575  MAE: 0.4977  Corr: 0.4904  Loss: 0.5049 
+2025-12-06 18:28:38,973 - MMSA [INFO] - Result for seed 1990: {'Mult_acc_2': 0.7615, 'Mult_acc_3': 0.6083, 'Mult_acc_5': 0.2823, 'F1_score': 0.7575, 'MAE': 0.4977, 'Corr': 0.4904, 'Loss': 0.5049, 'seed': 1990}
+2025-12-06 18:28:38,990 - MMSA [INFO] - Results saved to MMSA/results/sims/bienc-sims/normal/sims_avg.csv.

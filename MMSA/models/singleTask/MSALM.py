@@ -724,7 +724,7 @@ class msaLMMixin(nn.Module):
         ca_layers = nn.ModuleList(
             [
                 MoeMMBlock(
-                    self.msa_config["mmgpt"], layer_idx, top_k=1
+                    self.msa_config["mmgpt"], layer_idx, top_k=2
                 )
                 for layer_idx in range(len(ca_list))
             ]
